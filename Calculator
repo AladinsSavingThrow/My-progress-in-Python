@@ -1,0 +1,34 @@
+print('addition\nsubtraction\nmultiplication\nDivision\nSquareroot')
+operation = input('which operation would you like to perform:').lower().strip()
+if operation == 'subtraction':
+    data = input('Enter two Numbers separated by a space')
+    num1, num2 = map(float, data.split())
+    print(num1 - num2)
+elif operation == 'multiplication':
+    data = input('Enter two Numbers separated by a space')
+    num1, num2 = map(float, data.split())
+    print(num1*num2)
+elif operation == 'addition':
+    data = input('Enter two Numbers separated by a space')
+    num1, num2 = map(float, data.split())
+    print(num1+num2)
+elif operation == 'squareroot':
+    from math import*
+    data = input('Enter a Number')
+    print(sqrt(float(data)))
+    rounded = (input('Do you want to round?:')).upper().strip()
+    if rounded == 'YES' or 'YEAH':
+        print(round(float(data)))
+    else: print(data)
+elif operation == 'division':
+    data = input('Enter two Numbers separated by a space')
+    num1, num2 = map(float, data.split())
+    print(num1/num2)
+    rounded = (input('Do you want to round?:')).strip().upper()
+    if rounded == 'YES' or 'YEAH':
+        print(round(float(num1/num2)))
+    else:
+        print('END')
+else:
+    print('DID YOU NOT READ THE OPTIONS!! NOW ENTER A VALID OPERATION STUPID')
+
